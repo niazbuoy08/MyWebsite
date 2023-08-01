@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - About</title>
+  <style>
+    body {
+      background-color: pink;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #271c1c;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      margin-right: 20px;
+    }
+
+    nav li:last-child {
+      margin-right: 0;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      padding: 8px;
+    }
+
+    nav a:hover {
+      background-color: #333;
+      color: #d6a0a0;
+      border-radius: 4px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 30px;
+      animation: fadeIn 1s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: rgba(201, 160, 160, 0.8);
+    }
+    .typewriter-cursor {
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+     
+     #video-container {
+      position: relative;
+      max-width: 800px; /* Adjust the maximum width as needed */
+      margin: 0 auto;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+  
+</head>
+
+<body>
+    <header>
+        <h1>
+          <span id="typewriter-text"></span>
+          <span class="typewriter-cursor">|</span>
+        </h1>
+      </header>
+  <
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cv.pdf.pdf" target="_blank">View CV</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Personal Information</h2>
+      <p>
+        Hello, I am Niaz Rahman. I am an Aspiring Software Engineering Student curently in my sophomore year at the Islamic University of Technology. I am  passionate about Full-Stack Develpment and have an interest in buiness. I have
+         worked on various projects that have honed my skills and knowledge.
+      </p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p>
+        B.Sc in Software Engineering
+        Islamic University of Technology
+      </p>
+    </section>
+
+    <section>
+      <h2>Contact Information</h2>
+      <p>
+        Email: rahmanniaz29@gmail.com
+        <br>
+        Phone: 01629673746
+      </p>
+    </section>
+  </main>
+  <div id="video-container">
+    <video controls loop>
+      <source src="video.mp4" type="video/mp4">
+      <!-- Add more <source> elements for different formats if needed -->
+    </video>
+  </div>
+  <footer>
+    <p>&copy; 2023 Niaz Rahman. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    // JavaScript to add typewriter effect to the header
+    const headerText = "About Me";
+    const typewriterTextElement = document.getElementById('typewriter-text');
+    let charIndex = 0;
+
+    function typeWriter() {
+      if (charIndex < headerText.length) {
+        typewriterTextElement.textContent += headerText.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, 100); // Adjust typing speed here (in milliseconds)
+      }
+    }
+
+    typeWriter();
+
+    // JavaScript to animate appearance of individual characters in each section's paragraph
+    const sections = document.querySelectorAll('section');
+
+    function animateParagraphs() {
+      sections.forEach(section => {
+        const paragraphs = section.querySelectorAll('p');
+        paragraphs.forEach(paragraph => {
+          const chars = paragraph.textContent.split('');
+          paragraph.textContent = '';
+          chars.forEach((char, index) => {
+            setTimeout(() => {
+              paragraph.textContent += char;
+            }, index * 30); // Adjust character animation speed here (in milliseconds)
+          });
+        });
+      });
+    }
+
+    animateParagraphs();
+
+    // JavaScript to change background color randomly when the button is clicked
+    const changeColorButton = document.createElement('button');
+    changeColorButton.textContent = 'Change Background Color';
+    changeColorButton.style.marginTop = '20px';
+    changeColorButton.style.backgroundColor = 'white';
+    changeColorButton.style.color = 'pink';
+    changeColorButton.style.border = 'none';
+    changeColorButton.style.padding = '10px 20px';
+    changeColorButton.style.borderRadius = '4px';
+    changeColorButton.style.cursor = 'pointer';
+
+    changeColorButton.addEventListener('click', () => {
+      const randomColor = getRandomColor();
+      document.body.style.backgroundColor = randomColor;
+    });
+
+    document.body.appendChild(changeColorButton);
+
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+    const video = document.querySelector('video');
+
+    video.addEventListener('mouseover', () => {
+      video.play();
+    });
+
+    video.addEventListener('mouseout', () => {
+      video.pause();
+    });
+   
+  
+
+    function typeWriter() {
+      if (charIndex < headerText.length) {
+        typewriterTextElement.textContent += headerText.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, 100); // Adjust typing speed here (in milliseconds)
+      } else {
+        typewriterTextElement.classList.remove('typewriter-cursor');
+      }
+    }
+
+    typeWriter();
+  </script>
+</body>
+
+</html>
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('Hello, I am Niaz!.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: rgba(115, 87, 87, 0.7);
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      text-align: center;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    nav {
+      background-color: rgba(176, 94, 94, 0.7);
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    main {
+      padding: 20px;
+      flex: 1;
+      animation: fadeIn 1.5s ease;
+    }
+
+    h2 {
+      border-bottom: 2px solid #fff;
+      padding-bottom: 5px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    footer {
+      padding: 10px;
+      text-align: center;
+      color: #000; /* Change footer font color to black */
+      animation: fadeInUp 1.5s ease;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to Your Niaz's Personal Website</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cv.pdf.pdf" target="_blank">View CV</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- No About Me section -->
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Niaz Rahman. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
